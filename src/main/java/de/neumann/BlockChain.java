@@ -1,6 +1,7 @@
 package de.neumann;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * BlockChain Class
@@ -8,14 +9,14 @@ import java.util.ArrayList;
  */
 public class BlockChain {
 
-    private final ArrayList<Block> chain;
+    private final LinkedList<Block> chain;
 
     /**
      * Constructor of the blockchain.
      * @param firstData First data of the blockchain. Needed for the genesis block.
      */
     public BlockChain(String firstData){
-        chain = new ArrayList<>();
+        chain = new LinkedList<>();
         Block block = new Block(firstData,"0000000000000000000000000000000000000000000000000000000000000000",
                 0);
         chain.add(block);
